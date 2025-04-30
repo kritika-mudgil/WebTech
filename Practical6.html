@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation using JS</title>
+    <link rel="stylesheet" href="practical6.css">
+    <script>
+        function validateInput() {
+            let Name= document.getElementById("number").value; 
+            let Password=document.getElementById("password").value;
+            let Age=document.getElementById("age").value;
+            if (Name.length<4) {
+                alert("Name must be at least 4 characters.");
+                return;
+             }
+
+            if(Password.length<7){
+                alert("Password must be at least 7 characters.")
+                return;
+            }
+            if(isNaN(Age) || age < 18){
+                alert("Please enter a valid number for age.");
+            }
+            alert("Valid Inputs")
+            
+            }
+        
+    </script>
+</head>
+<body>
+    Enter your name:
+    <input type="text" id="number"><br><br>
+    
+    Enter Password:
+    <input type="password" id="password">
+    <br><br>
+    Enter Age:
+    <input type="number" id="age"><br><br>
+    <input type="button" id="submit" value="Submit" onclick="validateInput()">
+
+</body>
+</html>
